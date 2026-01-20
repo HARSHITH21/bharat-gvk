@@ -80,7 +80,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-slate-800 text-lg mb-1">Visit Our Factory</h3>
-                                    <p className="text-slate-600">EC Complex, Kushaiguda<br />Hyderabad, Telangana, India</p>
+                                    <p className="text-slate-600">Shed No 7/B, Third Floor, EC Complex<br />Kushaiguda, Hyderabad-062, Telangana</p>
                                 </div>
                             </div>
 
@@ -102,8 +102,12 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-slate-800 text-lg mb-1">Email Us</h3>
-                                    <a href="mailto:info@bharatgvk.com" className="text-blue-600 hover:text-blue-700 font-medium transition">
-                                        info@bharatgvk.com
+                                    <a href="mailto:bharatgvktechnologies@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium transition">
+                                        bharatgvktechnologies@gmail.com
+                                    </a>
+                                    <br />
+                                    <a href="mailto:venkat.gade123@gmail.com" className="text-blue-600 hover:text-blue-700 font-medium transition text-sm">
+                                        venkat.gade123@gmail.com
                                     </a>
                                 </div>
                             </div>

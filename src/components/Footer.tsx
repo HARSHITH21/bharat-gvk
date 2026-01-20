@@ -25,11 +25,11 @@ export default function Footer() {
                         <div>
                             <h3 className="text-xl font-bold mb-4 text-blue-400">CONTACT</h3>
                             <div className="text-slate-400 text-sm space-y-2">
-                                <p>Flat no G3, House no 4-100, Siri Homes</p>
-                                <p>Buddha Nagar Colony, 40 Feet Road</p>
-                                <p>Peerzadiguda, Hyderabad, Telangana 500092</p>
-                                <p className="mt-2 text-white font-medium">040-49503330 / +91 81796 90597</p>
-                                <p className="text-blue-400">info@vrengineers.net</p>
+                                <p>Shed No 7/B, Third Floor, EC Complex</p>
+                                <p>Kushaiguda, Hyderabad-062</p>
+                                <p>Telangana, India</p>
+                                <p className="mt-2 text-white font-medium">+91 92465 58934</p>
+                                <p className="text-blue-400">bharatgvktechnologies@gmail.com</p>
                             </div>
                         </div>
                     </div>

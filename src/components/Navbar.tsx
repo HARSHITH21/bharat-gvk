@@ -31,13 +31,13 @@ export default function Navbar() {
                     <div className="flex items-center space-x-4 text-white">
                         <a href="tel:+919246558934" className="flex items-center space-x-2 hover:text-blue-200 transition">
                             <Phone className="w-4 h-4" />
-                            <span className="hidden sm:inline">040-49503330 / +91 81796 90597</span>
+                            <span className="hidden sm:inline">+91 92465 58934</span>
                             <span className="sm:hidden">Call Us</span>
                         </a>
                     </div>
                     <div className="flex items-center space-x-2 text-white">
                         <Mail className="w-4 h-4" />
-                        <a href="mailto:info@bharatgvk.com" className="hover:text-blue-200 transition">info@bharatgvk.com</a>
+                        <a href="mailto:bharatgvktechnologies@gmail.com" className="hover:text-blue-200 transition">info@bharatgvk.com</a>
                     </div>
                 </div>
             </div>
@@ -63,8 +63,8 @@ export default function Navbar() {
                                 key={item.label}
                                 href={item.href}
                                 className={`px-4 py-2 rounded-lg font-medium transition-all ${isActive(item.href)
-                                        ? 'bg-blue-600 text-white shadow-lg'
-                                        : 'text-slate-700 hover:bg-blue-50 hover:text-blue-700'
+                                    ? 'bg-blue-600 text-white shadow-lg'
+                                    : 'text-slate-700 hover:bg-blue-50 hover:text-blue-700'
                                     }`}
                             >
                                 {item.label}
@@ -89,8 +89,8 @@ export default function Navbar() {
                                     href={item.href}
                                     onClick={() => setMobileMenuOpen(false)}
                                     className={`px-4 py-3 rounded-lg font-medium transition-all ${isActive(item.href)
-                                            ? 'bg-blue-600 text-white'
-                                            : 'text-slate-700 hover:bg-blue-50 hover:text-blue-700'
+                                        ? 'bg-blue-600 text-white'
+                                        : 'text-slate-700 hover:bg-blue-50 hover:text-blue-700'
                                         }`}
                                 >
                                     {item.label}
