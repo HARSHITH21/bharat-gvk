@@ -56,9 +56,10 @@ export default function Hero() {
 
                     {/* Description */}
                     <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                        <strong className="text-slate-800">Bharat GVK Technologies</strong> is a leading OEM manufacturer
-                        and importer of precision electromechanical products. We deliver quality components
-                        directly from factory to end users at competitive prices.
+                        <strong className="text-slate-800">Bharat GVK Technologies</strong>, founded by{' '}
+                        <span className="text-blue-600 font-medium">Mr. Venkateshwarlu Gade</span> in Hyderabad,
+                        is a leading OEM manufacturer and importer of precision electromechanical products.
+                        We deliver quality components directly from factory to end users at competitive prices.
                     </p>
 
                     {/* Stats Row */}
@@ -130,13 +131,6 @@ export default function Hero() {
                         </div>
                     ))}
                 </div>
-            </div>
-
-            {/* Founder Credit */}
-            <div className="bg-slate-50 py-6 text-center">
-                <p className="text-slate-500 text-sm">
-                    Founded by <span className="text-slate-700 font-medium">Mr. Venkateshwarlu Gade</span> in Hyderabad
-                </p>
             </div>
         </section>
     );
