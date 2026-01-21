@@ -5,6 +5,7 @@ const footerLinks = [
     { href: '/products', label: 'PRODUCTS' },
     { href: '/achievements', label: 'ACHIEVEMENTS' },
     { href: '/services', label: 'SERVICES' },
+    { href: '/applications', label: 'APPLICATIONS' },
     { href: '/gallery', label: 'GALLERY' },
     { href: '/contact', label: 'CONTACT US' }
 ];
