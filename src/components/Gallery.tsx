@@ -15,6 +15,24 @@ export default function Gallery() {
                         <p className="text-lg text-slate-600">A glimpse into our manufacturing excellence</p>
                     </div>
 
+                    {/* Featured Video */}
+                    <div className="mb-12">
+                        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                            <video
+                                controls
+                                className="w-full"
+                                poster="/images/hero-bg.png"
+                            >
+                                <source src="/images/factory-video.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                            <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-4 text-center">
+                                <p className="text-white font-medium">Our Manufacturing Facility in Action</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Image Gallery */}
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {galleryImages.map((img, index) => (
                             <div key={index} className="aspect-square bg-gradient-to-br from-blue-100 to-slate-100 rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer relative">
