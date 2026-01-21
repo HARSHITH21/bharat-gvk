@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Applications from '@/components/Applications';
-import Clients from '@/components/Clients';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
@@ -15,7 +14,6 @@ export default function ApplicationsPage() {
             <Navbar />
             <main className="pt-4">
                 <Applications />
-                <Clients />
             </main>
             <Footer />
         </div>
