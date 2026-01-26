@@ -5,11 +5,19 @@ import Image from 'next/image';
 import { Play, X } from 'lucide-react';
 
 const galleryImages = [
-    "imag1", "imag2", "imag3", "imag4", "imag5", "imag6", "imag7", "imag8"
+    { src: "/images/gallery-motors.png", title: "Electric Motors Collection" },
+    { src: "/images/gallery-loadcells.png", title: "Weighing Equipment" },
+    { src: "/images/gallery-plc.png", title: "PLC & Control Systems" },
+    { src: "/images/gallery-bearings.png", title: "PAB Bearings" },
+    { src: "/images/gallery-factory.png", title: "Manufacturing Facility" },
+    { src: "/images/gallery-conveyor.png", title: "Conveyor Systems" },
+    { src: "/images/gallery-packaging.png", title: "Packaging Machinery" },
+    { src: "/images/gallery-drives.png", title: "Motor Drives & VFDs" },
 ];
 
 export default function Gallery() {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<{ src: string; title: string } | null>(null);
 
     return (
         <>
@@ -48,14 +56,21 @@ export default function Gallery() {
                         {/* Image Gallery */}
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                             {galleryImages.map((img, index) => (
-                                <div key={index} className="aspect-square bg-gradient-to-br from-blue-100 to-slate-100 rounded-lg overflow-hidden hover:scale-105 transition-transform cursor-pointer relative">
+                                <div
+                                    key={index}
+                                    className="aspect-square bg-gradient-to-br from-blue-100 to-slate-100 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer relative shadow-md hover:shadow-xl"
+                                    onClick={() => setSelectedImage(img)}
+                                >
                                     <Image
-                                        src={`/images/${img}.svg`}
-                                        alt={`Gallery ${index + 1}`}
+                                        src={img.src}
+                                        alt={img.title}
                                         fill
                                         className="object-cover"
                                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                                     />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end">
+                                        <p className="text-white text-sm font-medium p-4">{img.title}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -87,6 +102,35 @@ export default function Gallery() {
                             <source src="/images/factory-video.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
+                    </div>
+                </div>
+            )}
+
+            {/* Fullscreen Image Modal */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button
+                        className="absolute top-4 right-4 text-white hover:text-gray-300 transition z-50"
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        <X className="w-10 h-10" />
+                    </button>
+                    <div
+                        className="relative w-full max-w-4xl h-[80vh]"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <Image
+                            src={selectedImage.src}
+                            alt={selectedImage.title}
+                            fill
+                            className="object-contain"
+                        />
+                        <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-lg font-medium bg-black/50 px-4 py-2 rounded-lg">
+                            {selectedImage.title}
+                        </p>
                     </div>
                 </div>
             )}
