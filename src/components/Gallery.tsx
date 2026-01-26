@@ -58,18 +58,20 @@ export default function Gallery() {
                             {galleryImages.map((img, index) => (
                                 <div
                                     key={index}
-                                    className="aspect-square bg-gradient-to-br from-blue-100 to-slate-100 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer relative shadow-md hover:shadow-xl"
+                                    className="bg-gradient-to-br from-blue-100 to-slate-100 rounded-xl overflow-hidden hover:scale-105 transition-transform cursor-pointer shadow-md hover:shadow-xl"
                                     onClick={() => setSelectedImage(img)}
                                 >
-                                    <Image
-                                        src={img.src}
-                                        alt={img.title}
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end">
-                                        <p className="text-white text-sm font-medium p-4">{img.title}</p>
+                                    <div className="aspect-square relative">
+                                        <Image
+                                            src={img.src}
+                                            alt={img.title}
+                                            fill
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                                        />
+                                    </div>
+                                    <div className="bg-white p-3 text-center">
+                                        <p className="text-slate-800 text-sm font-medium">{img.title}</p>
                                     </div>
                                 </div>
                             ))}
